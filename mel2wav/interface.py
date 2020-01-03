@@ -1,7 +1,6 @@
 from mel2wav.modules import Generator, Audio2Mel
 
 from pathlib import Path
-import yaml
 import torch
 import os
 
@@ -19,6 +18,8 @@ def load_model(mel2wav_path, device=get_default_device()):
         mel2wav_path (str or Path): path to the root folder of dumped text2mel
         device (str or torch.device): device to load the model
     """
+    import yaml
+
     root = Path(mel2wav_path)
     with open(root / "args.yml", "r") as f:
         args = yaml.load(f, Loader=yaml.FullLoader)

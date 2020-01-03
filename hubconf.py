@@ -1,4 +1,4 @@
-dependencies = ["torch", "librosa", "yaml"]
+dependencies = ["torch", "librosa"]
 from mel2wav import MelVocoder
 
 
