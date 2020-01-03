@@ -2,7 +2,7 @@ dependencies = ["torch", "librosa", "yaml"]
 from mel2wav import MelVocoder
 
 
-def load_melgan(model_name="multi_speaker"):
+def load_melgan(model_name="multi_speaker", device="cpu"):
     """
     Exposes a MelVocoder Interface
     Args:
@@ -13,4 +13,4 @@ def load_melgan(model_name="multi_speaker"):
             inverse function convert mel to raw audio using MelGAN
     """
 
-    return MelVocoder(path=None, github=True, model_name=model_name)
+    return MelVocoder(path=None, github=True, model_name=model_name, device=device)
